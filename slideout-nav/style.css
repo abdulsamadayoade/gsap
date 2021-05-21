@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Monument Extended";
+    src: url("MonumentExtended-Regular.otf") format("opentype");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Monument Extended";
+    height: 100vh;
+    width: 100%;
+    background-image: url("woman.jpg");
+    background-size: cover;
+}
+
+.wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    width: 6%;
+    height: 100vh;
+    background: #a72929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2.4px solid #fff;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    transform: rotate(-90deg);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.nav {
+    position: fixed;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    left: 6%;
+    background: #252e2d;
+}
+
+.nav-items {
+    margin: 60px;
+}
+
+.nav-item {
+    position: relative;
+    font-size: 120px;
+}
+
+.nav-item a {
+    position: relative;
+    top: 140px;
+    text-decoration: none;
+    color: #a72929;
+    text-transform: uppercase;
+    font-family: "Monument Extended";
+    font-size: 130px;
+    transition: 1s;
+}
+
+.nav-item-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    background: #252e2d;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+.nav-item::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 0%;
+    height: 2.8px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
