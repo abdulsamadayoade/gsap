@@ -32,6 +32,20 @@ body {
     align-items: center;
     justify-content: center;
     border-right: 2.4px solid #fff;
+    animation-name: slideIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s
+}
+
+@keyframes slideIn {
+    from {
+        left: -20%;
+    }
+
+    to {
+        left: 0%;
+    }
 }
 
 .nav-toggle {
