@@ -1,0 +1,221 @@
+@font-face {
+    font-family: "Graphik Regular";
+    src: url("Graphik-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Canela Bold";
+    src: url("canela-bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Canela Thin";
+    src: url("Canela-Thin.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Graphik Regular";
+    font-size: 1.5rem;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+// COLORS
+$primary-color: #543c10;
+
+.one,
+header {
+    height: 100vh;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 132rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.one {
+    background-color: #000;
+    // transform: translateY(-100vh);
+}
+
+.two {
+    background-image: url('bg.jpg');
+    background-size: cover;
+
+    * {
+        color: $primary-color;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 12rem;
+
+        svg {
+            height: 20px;
+            width: 20px;
+        }
+
+        .first {
+            display: flex;
+            align-items: center;
+        }
+
+        .bag {
+            width: 4rem;
+            height: 4rem;
+            background-color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+        }
+
+        .shop {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.3px;
+            padding-bottom: 2px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background-color: $primary-color;
+                transform: scale(0);
+                transform-origin: center;
+                transition: transform .3s ease-in-out;
+            }
+
+            &:hover::after {
+                transform: scale(1);
+            }
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            position: relative;
+            width: 50px;
+            height: 100px;
+            position: relative;
+
+            &::before {
+                content: 'lola';
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 2px;
+                font-size: 3rem;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+        }
+
+        .menu {
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.3px;
+            padding-bottom: 2px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background-color: $primary-color;
+                transform: scale(0);
+                transform-origin: center;
+                transition: transform .3s ease-in-out;
+            }
+
+            &:hover::after {
+                transform: scale(1);
+            }
+        }
+    }
+
+    .hero {
+        display: flex;
+        justify-content: center;
+
+        .header-h1 {
+            font-family: "Canela Thin";
+            color: #fff;
+            font-size: 14rem;
+            margin-top: 13rem;
+        }
+    }
+}
+
+.one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+        display: block;
+        color: #fff;
+        font-size: 1.3rem;
+        position: relative;
+        width: 50px;
+        width: 500px;
+        height: 100px;
+        position: relative;
+
+        &::before {
+            content: 'lola';
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 2px;
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}
