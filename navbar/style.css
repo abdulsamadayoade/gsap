@@ -4,11 +4,6 @@
 }
 
 @font-face {
-  font-family: "Canela Bold";
-  src: url("canela-bold.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Canela Thin";
   src: url("Canela-Thin.ttf") format("truetype");
 }
@@ -30,14 +25,14 @@ body {
   overflow-y: hidden;
 }
 
-.one,
-header {
-  height: 100vh;
-  width: 100%;
-}
-
 a {
   text-decoration: none;
+}
+
+.preloader,
+.header {
+  height: 100vh;
+  width: 100%;
 }
 
 .container {
@@ -46,37 +41,33 @@ a {
   margin: 0 auto;
 }
 
-.one {
-  background-color: #000;
-}
-
-.two {
+.header {
   background-image: url("bg.jpg");
   background-size: cover;
 }
 
-.two * {
+.header * {
   color: #543c10;
 }
 
-.two .nav {
+.header .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 12rem;
 }
 
-.two .nav svg {
+.header .nav svg {
   height: 20px;
   width: 20px;
 }
 
-.two .nav .first {
+.header .nav__link {
   display: flex;
   align-items: center;
 }
 
-.two .nav .bag {
+.header .nav--bag {
   width: 4rem;
   height: 4rem;
   background-color: #000;
@@ -87,7 +78,7 @@ a {
   margin-right: 1.5rem;
 }
 
-.two .nav .shop {
+.header .nav--shop {
   display: inline-block;
   font-size: 1.1rem;
   font-weight: 600;
@@ -97,7 +88,7 @@ a {
   position: relative;
 }
 
-.two .nav .shop::after {
+.header .nav--shop::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -110,36 +101,35 @@ a {
   transition: transform .3s ease-in-out;
 }
 
-.two .nav .shop:hover::after {
+.header .nav--shop:hover::after {
   transform: scale(1);
 }
 
-.two .nav .logo {
-  font-size: 1.3rem;
-  position: relative;
-  width: 50px;
-  height: 100px;
-  position: relative;
-}
-
-.two .nav .logo::before {
-  content: 'lola';
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 2px;
-  font-size: 3rem;
-  text-transform: uppercase;
+.header .nav--logo {
+  font-size: 1.1rem;
   font-weight: 600;
+  letter-spacing: 3px;
+  position: relative;
+  border-top: 1px solid #543c10;
+  padding-top: 5px;
+  text-transform: uppercase;
 }
 
-.two .nav .menu {
+.header .nav--logo::before, .header .nav--logo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  width: 100%;
+  height: 1px;
+  background-color: #543c10;
+}
+
+.header .nav--logo::after {
+  bottom: -.8rem;
+}
+
+.header .nav--menu {
   background: transparent;
   border: none;
   outline: none;
@@ -153,7 +143,7 @@ a {
   position: relative;
 }
 
-.two .nav .menu::after {
+.header .nav--menu::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -166,52 +156,38 @@ a {
   transition: transform .3s ease-in-out;
 }
 
-.two .nav .menu:hover::after {
+.header .nav--menu:hover::after {
   transform: scale(1);
 }
 
-.two .hero {
+.header .hero {
   display: flex;
   justify-content: center;
 }
 
-.two .hero .header-h1 {
+.header .hero__heading {
   font-family: "Canela Thin";
   color: #fff;
   font-size: 14rem;
   margin-top: 13rem;
 }
 
-.one {
+.preloader {
+  background-color: #000;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.one .logo {
-  display: block;
   color: #fff;
-  font-size: 1.3rem;
-  position: relative;
-  width: 50px;
-  width: 500px;
-  height: 100px;
-  position: relative;
 }
 
-.one .logo::before {
-  content: 'lola';
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 2px;
-  font-size: 3rem;
+.preloader p {
+  font-size: 2.5rem;
+  margin-bottom: .1rem;
+}
+
+.preloader span {
+  font-size: 1rem;
   text-transform: uppercase;
-  font-weight: 600;
+  letter-spacing: 1px;
 }
