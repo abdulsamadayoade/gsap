@@ -4,8 +4,18 @@
 }
 
 @font-face {
+  font-family: "Graphik Medium";
+  src: url("Graphik-Medium.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Canela Thin";
   src: url("Canela-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Canela ThinItalic";
+  src: url("Canela-ThinItalic.ttf") format("truetype");
 }
 
 * {
@@ -22,7 +32,7 @@ body {
   font-family: "Graphik Regular";
   font-size: 1.5rem;
   height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 a {
@@ -41,7 +51,12 @@ a {
   margin: 0 auto;
 }
 
+ul {
+  list-style: none;
+}
+
 .preloader {
+  transform: translateY(-100vh);
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -64,6 +79,7 @@ a {
 .header {
   background-image: url("bg.jpg");
   background-size: cover;
+  transform: translateY(-100vh);
 }
 
 .header * {
@@ -177,6 +193,140 @@ a {
 }
 
 .header .nav--menu:hover::after {
+  transform: scale(1);
+}
+
+.header .nav-overlay__left, .header .nav-overlay__right {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.header .nav-overlay__left {
+  width: 0;
+  height: 100vh;
+  left: 0;
+}
+
+.header .nav-overlay__right {
+  width: 42%;
+  height: 100vh;
+  right: 0;
+  background-color: #fff;
+  padding-top: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header .nav-overlay__right .menu-links,
+.header .nav-overlay__right .support {
+  width: 250px;
+}
+
+.header .nav-overlay__right .menu-links > span,
+.header .nav-overlay__right .support > span {
+  color: #ceb286;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.header .nav-overlay__right .menu-links ul,
+.header .nav-overlay__right .support ul {
+  padding: 0 4rem;
+}
+
+.header .nav-overlay__right .menu-links li {
+  margin-bottom: 2.7rem;
+}
+
+.header .nav-overlay__right .menu-links a {
+  font-family: "Canela Thin";
+  color: #1c1c1d;
+  font-size: 4.2rem;
+}
+
+.header .nav-overlay__right .menu-links a:hover {
+  font-family: "Canela ThinItalic";
+  color: #8e6e35;
+}
+
+.header .nav-overlay__right .support {
+  margin-top: 3rem;
+}
+
+.header .nav-overlay__right .support .support__links a::after, .header .nav-overlay__right .support__links .support a::after, .header .nav-overlay__right .support .developer span::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #1c1c1d;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform .3s ease-in-out;
+}
+
+.header .nav-overlay__right .support__links li {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.header .nav-overlay__right .support__links a {
+  color: #1c1c1d;
+  font-weight: 500;
+  font-family: "Graphik Medium",sans-serif;
+  position: relative;
+  transition: color .3s ease-in-out;
+}
+
+.header .nav-overlay__right .support__links a:hover {
+  color: #543c10;
+}
+
+.header .nav-overlay__right .support__links a:hover::after {
+  transform: scale(1);
+}
+
+.header .nav-overlay__right .support__social {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.header .nav-overlay__right .support__social li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.header .nav-overlay__right .support__social a {
+  color: #1c1c1d;
+  font-family: "Graphik Medium",sans-serif;
+  transition: color .3s ease-in-out;
+}
+
+.header .nav-overlay__right .support__social a:hover {
+  color: #543c10;
+}
+
+.header .nav-overlay__right .support .developer {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  text-transform: uppercase;
+  font-size: .94rem;
+  color: #1c1c1d;
+  opacity: .5;
+  font-family: "Graphik Medium", sans-serif;
+}
+
+.header .nav-overlay__right .support .developer span {
+  position: relative;
+}
+
+.header .nav-overlay__right .support .developer span:hover::after {
   transform: scale(1);
 }
 
