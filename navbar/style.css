@@ -231,7 +231,7 @@ ul {
   letter-spacing: .6px;
   font-size: 1rem;
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 2.3rem;
 }
 
 .header .nav-overlay__right .menu-links ul,
@@ -240,7 +240,7 @@ ul {
 }
 
 .header .nav-overlay__right .menu-links li {
-  margin-bottom: 2.7rem;
+  margin-bottom: 2.8rem;
 }
 
 .header .nav-overlay__right .menu-links a {
@@ -255,7 +255,7 @@ ul {
 }
 
 .header .nav-overlay__right .support {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .header .nav-overlay__right .support .support__links a::after, .header .nav-overlay__right .support__links .support a::after, .header .nav-overlay__right .support .developer span::after {
