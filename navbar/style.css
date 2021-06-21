@@ -41,6 +41,26 @@ a {
   margin: 0 auto;
 }
 
+.preloader {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.preloader p {
+  font-size: 2.5rem;
+  margin-bottom: .1rem;
+}
+
+.preloader span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .header {
   background-image: url("bg.jpg");
   background-size: cover;
@@ -62,7 +82,7 @@ a {
   width: 20px;
 }
 
-.header .nav__link {
+.header .nav--link {
   display: flex;
   align-items: center;
 }
@@ -170,24 +190,16 @@ a {
   color: #fff;
   font-size: 14rem;
   margin-top: 13rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 3.2s both;
 }
 
-.preloader {
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
-
-.preloader p {
-  font-size: 2.5rem;
-  margin-bottom: .1rem;
-}
-
-.preloader span {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
