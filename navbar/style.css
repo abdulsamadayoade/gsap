@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Graphik Regular";
-  src: url("Graphik-Regular.ttf") format("truetype");
+  src: url("textfonts/Graphik-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Graphik Medium";
-  src: url("Graphik-Medium.ttf") format("truetype");
+  src: url("textfonts/Graphik-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Canela Thin";
-  src: url("Canela-Thin.ttf") format("truetype");
+  src: url("textfonts/Canela-Thin.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Canela ThinItalic";
-  src: url("Canela-ThinItalic.ttf") format("truetype");
+  src: url("textfonts/Canela-ThinItalic.ttf") format("truetype");
 }
 
 * {
@@ -77,7 +77,7 @@ ul {
 }
 
 .header {
-  background-image: url("bg.jpg");
+  background-image: url("images/bg.jpg");
   background-size: cover;
   transform: translateY(-100vh);
 }
@@ -86,7 +86,7 @@ ul {
   color: #543c10;
 }
 
-.header .nav--menu::after, .header .nav-overlay__left .nav--menu::after, .header .nav-overlay__right .support__links a::after, .header .nav-overlay__right .support .developer span::after {
+.header .nav--shop::after, .header .nav--menu::after, .header .nav-overlay__left .nav--menu::after, .header .nav-overlay__right .support__links a::after, .header .nav-overlay__right .support .developer span::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -138,16 +138,8 @@ ul {
 }
 
 .header .nav--shop::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  width: 100%;
   background-color: #543c10;
-  transform: scale(0);
-  transform-origin: center;
-  transition: transform .3s ease-in-out;
+  bottom: 0;
 }
 
 .header .nav--shop:hover::after {
@@ -211,14 +203,14 @@ ul {
   width: 58%;
   height: 100vh;
   left: 0;
-  background-image: url("img1.jpg");
+  background-image: url("images/img1.jpg");
   background-size: cover;
   padding: 5rem;
   transition: background-image .5s ease-in-out;
 }
 
 .header .nav-overlay__left.active {
-  background-image: url("img2.jpg");
+  background-image: url("images/img2.jpg");
 }
 
 .header .nav-overlay__left .nav--menu {
@@ -251,13 +243,13 @@ ul {
 }
 
 .header .nav-overlay__left .img-box .img-1 {
-  background-image: url("img1a.jpg");
+  background-image: url("images/img1a.jpg");
   z-index: 5;
   opacity: 1;
 }
 
 .header .nav-overlay__left .img-box .img-2 {
-  background-image: url("img2a.jpg");
+  background-image: url("images/img2a.jpg");
   transition: all .5s ease-in-out;
 }
 
@@ -267,7 +259,7 @@ ul {
 }
 
 .header .nav-overlay__left .img-box .img-3 {
-  background-image: url("img3a.jpg");
+  background-image: url("images/img3a.jpg");
 }
 
 .header .nav-overlay__left .img-box .img-3.active {
@@ -276,7 +268,7 @@ ul {
 }
 
 .header .nav-overlay__left .img-box .img-4 {
-  background-image: url("img4a.jpg");
+  background-image: url("images/img4a.jpg");
 }
 
 .header .nav-overlay__left .img-box .img-4.active {
@@ -285,7 +277,7 @@ ul {
 }
 
 .header .nav-overlay__left .img-box .img-5 {
-  background-image: url("img5a.jpg");
+  background-image: url("images/img5a.jpg");
 }
 
 .header .nav-overlay__left .img-box .img-5.active {
