@@ -96,6 +96,19 @@ ul {
         color: $color-6;
     }
 
+    %line {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: $color-2;
+        transform: scale(0);
+        transform-origin: center;
+        transition: transform .3s ease-in-out;
+    }
+
     .nav {
         display: flex;
         justify-content: space-between;
@@ -184,21 +197,14 @@ ul {
             font-size: 1.1rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2.3px;
+            letter-spacing: 1.3px;
             padding-bottom: 2px;
             position: relative;
 
             &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                height: 1px;
-                width: 100%;
+                @extend %line;
                 background-color: $color-6;
-                transform: scale(0);
-                transform-origin: center;
-                transition: transform .3s ease-in-out;
+                bottom: 0;
             }
 
             &:hover::after {
@@ -216,10 +222,90 @@ ul {
         }
 
         &__left {
-            // width: 58%;
-            width: 0;
+            width: 58%;
             height: 100vh;
             left: 0;
+            background-image: url('img1.jpg');
+            background-size: cover;
+            padding: 5rem;
+            transition: background-image .5s ease-in-out;
+
+            &.active {
+                background-image: url('img2.jpg');
+            }
+
+            .nav--menu {
+                color: $color-7;
+
+                &::after {
+                    @extend %line;
+                    background-color: $color-7;
+                    bottom: 0;
+                }
+            }
+
+            .img-box {
+                height: 42rem;
+                width: 28rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                .img {
+                    height: 100%;
+                    width: 100%;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    transition: all .5s ease-in-out;
+                }
+
+                .img-1 {
+                    background-image: url('img1a.jpg');
+                    z-index: 5;
+                    opacity: 1;
+                }
+
+                .img-2 {
+                    background-image: url('img2a.jpg');
+                    transition: all .5s ease-in-out;
+
+                    &.active {
+                        opacity: 1;
+                        z-index: 10;
+                    }
+                }
+
+                .img-3 {
+                    background-image: url('img3a.jpg');
+
+                    &.active {
+                        opacity: 1;
+                        z-index: 10;
+                    }
+                }
+
+                .img-4 {
+                    background-image: url('img4a.jpg');
+
+                    &.active {
+                        opacity: 1;
+                        z-index: 10;
+                    }
+                }
+
+                .img-5 {
+                    background-image: url('img5a.jpg');
+
+                    &.active {
+                        opacity: 1;
+                        z-index: 10;
+                    }
+                }
+            }  
         }
 
         &__right {
@@ -257,6 +343,7 @@ ul {
                 }
 
                 a {
+                    display: block;
                     font-family: "Canela Thin";
                     color: $color-2;
                     font-size: 4.2rem;
@@ -270,19 +357,6 @@ ul {
 
             .support {
                 margin-top: 1rem;
-
-                %line {
-                    content: '';
-                    position: absolute;
-                    bottom: -1px;
-                    left: 0;
-                    height: 1px;
-                    width: 100%;
-                    background-color: $color-2;
-                    transform: scale(0);
-                    transform-origin: center;
-                    transition: transform .3s ease-in-out;
-                }
 
                 &__links {
                     li {
