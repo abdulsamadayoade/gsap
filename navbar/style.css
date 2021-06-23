@@ -194,6 +194,7 @@ ul {
 }
 
 .header .nav-overlay__left, .header .nav-overlay__right {
+  height: 100vh;
   position: absolute;
   top: 0;
   z-index: 10;
@@ -201,16 +202,11 @@ ul {
 
 .header .nav-overlay__left {
   width: 58%;
-  height: 100vh;
   left: 0;
   background-image: url("images/img1.jpg");
   background-size: cover;
   padding: 5rem;
-  transition: background-image .5s ease-in-out;
-}
-
-.header .nav-overlay__left.active {
-  background-image: url("images/img2.jpg");
+  transition: all .5s ease-in-out;
 }
 
 .header .nav-overlay__left .nav--menu {
@@ -245,7 +241,7 @@ ul {
 .header .nav-overlay__left .img-box .img-1 {
   background-image: url("images/img1a.jpg");
   z-index: 5;
-  opacity: 1;
+  opacity: 10;
 }
 
 .header .nav-overlay__left .img-box .img-2 {
@@ -287,7 +283,6 @@ ul {
 
 .header .nav-overlay__right {
   width: 42%;
-  height: 100vh;
   right: 0;
   background-color: #fff;
   padding-top: 5rem;
