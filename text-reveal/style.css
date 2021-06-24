@@ -9,16 +9,10 @@
     src: url("../MonumentExtended-Regular.otf") format("opentype");
 }
 
-@font-face {
-    font-family: "Monument UBold";
-    src: url("../MonumentExtended-Ultrabold.otf") format("opentype");
-}
-
 html, body {
     background-color: #161616;
     color: #fff;
     font-family: "Monument Extended";
-    /* font-family: "Monument UBold"; */
     text-transform: uppercase;
     height: 100vh;
     display: flex;
