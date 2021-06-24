@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Monument Extended";
+    src: url("../MonumentExtended-Regular.otf") format("opentype");
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+    background-color: #0f241e;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: #0f241e;
+    color: #fff;
+    position: fixed;
+}
+
+.btn-container {
+    position: fixed;
+    right: 0;
+    margin: 30px;
+    font-size: 40px;
+}
+
+.menu {
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+}
+
+.menu-item {
+    font-size: 120px;
+    margin: 4px;
+    overflow: hidden;
+    margin-top: -50px;
+}
+
+.menu-item-wrapper {
+    position: relative;
+    display: flex;
+    left: -10%;
+    transition: all .2s ease-out;
+}
+
+ion-icon {
+    position: relative;
+    top: 8px;
+    margin-right: 10px;
+}
+
+.menu-item:hover .menu-item-wrapper {
+    left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Monument Extended";
+    text-transform: uppercase;
+}
