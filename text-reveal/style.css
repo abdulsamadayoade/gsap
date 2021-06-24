@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Monument Extended";
+    src: url("../MonumentExtended-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Monument UBold";
+    src: url("../MonumentExtended-Ultrabold.otf") format("opentype");
+}
+
+html, body {
+    background-color: #161616;
+    color: #fff;
+    font-family: "Monument Extended";
+    /* font-family: "Monument UBold"; */
+    text-transform: uppercase;
+    height: 100vh;
+    display: flex;
+}
+
+.wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .line {
+    width: 80%;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.wrapper .line span {
+    position: absolute;
+    font-size: 50px;
+    line-height: 40px;
+}
