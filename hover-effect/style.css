@@ -1,0 +1,92 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #161616;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Monument Extended";
+    src: url("../MonumentExtended-Regular.otf") format("opentype");
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.progressbar {
+    position: fixed;
+    top: 0;
+    left: 85%;
+    background: rgba(255, 255, 255, 0.4);
+    width: 1px;
+    z-index: 1;
+}
+
+.navigation-wrapper ul {
+    margin: 240px 0 200px 100px;
+    list-style: none;
+    position: absolute;
+}
+
+.navigation-item {
+    display: block;
+    user-select: none;
+    margin: 120px 0;
+}
+
+a {
+    font-family: "Monument Extended";
+    font-size: 90px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.navigation-item span {
+    display: block;
+    position: relative;
+}
+
+.navigation-item span::before {
+    width: 0;
+    color: #fff;
+    overflow: hidden;
+    position: absolute;
+    content: attr(data-text);
+    transition: all 1s cubic-bezier(0.84, 0, 0.8, 0.99);
+}
+
+.navigation-item span:hover::before {
+    width: 100%;
+}
+
+.project-preview-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.project-preview {
+    position: fixed;
+    top: 12%;
+    left: 50%;
+    width: 0;
+    height: 400px;
+    background: url('images/1.jpeg');
+    background-size: cover;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+    .progressbar,
+    .project-preview-wrapper {
+        display: none;
+    }
+
+    a {
+        font-size: 20px;
+    }
+}
