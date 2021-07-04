@@ -57,12 +57,14 @@ ion-icon {
     position: absolute;
     margin: 2em;
     right: 0;
+    cursor: pointer;
+    z-index: 3;
 }
 
 .menu-container {
     position: fixed;
     width: 50%;
-    right: 0%;
+    right: -50%;
     height: 100vh;
     z-index: 2;
     background: red;
@@ -167,4 +169,35 @@ ion-icon {
     position: absolute;
     top: 75%;
     left: -20px;
+}
+
+.menu-links .menu-link-1:hover a::after,
+.menu-links .menu-link-2:hover a::after,
+.menu-links .menu-link-3:hover a::after,
+.menu-links .menu-link-4:hover a::after {
+    animation-name: tada;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes tada {
+    0% {
+        transform: scale3d(1,1,1);
+    }
+
+    10%, 20% {
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate(0,0,1, 3deg);
+    }
+
+    40%, 60%, 80% {
+        transform: scale3d(1.1,1.1,1.1) rotate(0,0,1,-3deg);
+    }
+
+    100% {
+        transform: scale3d(1,1,1);
+    }
 }
