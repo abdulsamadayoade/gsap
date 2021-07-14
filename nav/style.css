@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Monument Extended";
+    src: url("../MonumentExtended-Regular.otf") format("opentype");
+}
+
+body {
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: "Monument Extended";
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 0;
+    margin: 1.4em;
+    padding: 1em;
+    width: 40px;
+    height: 12px;
+    right: 0;
+    z-index: 1;
+}
+
+span.one,
+span.two {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    cursor: pointer;
+}
+
+span.two {
+    margin-top: 12px;
+}
+
+.menu {
+    position: absolute;
+    z-index: 0;
+    height: 100vh;
+    width: 100%;
+    background: tomato;
+    top: -100%;
+}
+
+.data {
+    padding: 8em 0 0 2em;
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    text-transform: uppercase;
+}
+
+li:first-child {
+    margin-bottom: 40px;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+li:not(:first-child) {
+    margin-bottom: 25px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
