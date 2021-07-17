@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="glitch-img" style="background-image: url('bg.jpg');"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="mgGlitch.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".glitch-img").mgGlitch({
+                destroy: false,
+                glitch: true,
+                scale: true,
+                blend: true,
+                blendModeType: 'hue',
+                glitch1TimeMin: 200,
+                glitch1TimeMax: 400,
+                glitch2TimeMin: 10,
+                glitch2TimeMax: 100
+            });
+        });
+    </script>
+</body>
+</html>
