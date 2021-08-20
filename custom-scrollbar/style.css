@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Monument Extended";
+    src: url("../MonumentExtended-Regular.otf") format("opentype");
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 10px;
+    font-family: "Monument Extended", sans-serif;
+}
+
+body {
+    color: #161616;
+    background: #f1f1f1;
+    min-height: 200vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+::-webkit-scrollbar {
+    background: grey;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #161616;
+}
