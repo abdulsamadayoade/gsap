@@ -1,0 +1,208 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Monument";
+  src: url("/MonumentExtended-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Bigilla";
+  src: url("/Bigilla.otf") format("opentype");
+}
+
+body {
+  background: #fff;
+  overflow: hidden;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-btn img {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.menu-btn.active {
+  z-index: 100;
+}
+
+.menu-btn.active img {
+  filter: invert(1);
+}
+
+.content {
+  position: absolute;
+  top: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 100%;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.content span {
+  font-family: 'Great Vibes', cursive;
+  font-size: 100px;
+  font-weight: lighter;
+  margin-bottom: -60px;
+  color: maroon;
+  z-index: 2;
+}
+
+.content h1 {
+  font-family: "Bigilla", sans-serif;
+  font-size: 120px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  line-height: .9;
+}
+
+.img-divs {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+
+.img-divs div {
+  height: 350px;
+  width: 300px;
+  background-size: cover;
+}
+
+.img-divs .div1 {
+  background: url("images/img-5.jpg") no-repeat 50% 50%;
+}
+
+.img-divs .div2 {
+  background: url("images/img-8.jpg") no-repeat 50% 50%;
+  height: 300px;
+  width: 300px;
+}
+
+.img-divs .div3 {
+  background: url("images/img-7.jpg") no-repeat 50% 50%;
+}
+
+.menu {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.menu .page-links {
+  margin-top: 45vh;
+}
+
+.menu .page-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu .page-links li {
+  font-size: 50px;
+  font-family: "Bigilla", sans-serif;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 15px;
+}
+
+.social-links {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
+
+.social-links ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.social-links ul li {
+  font-family: "Monument";
+  text-transform: uppercase;
+  font-size: 13px;
+  margin: 0 15px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.showcase div {
+  position: absolute;
+  background-size: cover;
+}
+
+.showcase .hover1 {
+  top: 50px;
+  left: 100px;
+  width: 200px;
+  height: 100px;
+  background: url("images/img-5.jpg") no-repeat 50% 50%;
+}
+
+.showcase .hover2 {
+  top: 100px;
+  left: 1000px;
+  width: 270px;
+  height: 170px;
+  background: url("images/img-6.jpg") no-repeat 50% 50%;
+}
+
+.showcase .hover3 {
+  top: 450px;
+  left: 900px;
+  width: 250px;
+  height: 150px;
+  background: url("images/img-7.jpg") no-repeat 50% 50%;
+}
+
+.showcase .hover4 {
+  top: 400px;
+  left: 150px;
+  width: 250px;
+  height: 150px;
+  background: url("images/img-8.jpg") no-repeat 50% 50%;
+}
+
+a:hover {
+  background: maroon;
+  transition: background .3s ease-in-out;
+}

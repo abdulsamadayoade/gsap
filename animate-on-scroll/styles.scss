@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Monument";
+    src: url('/MonumentExtended-Regular.otf') format('opentype');
+}
+
+body {
+    color: #fff;
+    background: #0f0f0f;
+    font-family: "Monument";
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.c1 h1 {
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.img1 {
+    width: 420px;
+    height: 500px;
+    background: url('images/img-5.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    filter: grayscale(1);
+}
+
+.img2 {
+    width: 620px;
+    height: 400px;
+    background: url('images/img-6.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    filter: grayscale(1);
+}
+
+.img3 {
+    width: 320px;
+    height: 450px;
+    background: url('images/img-7.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    filter: grayscale(1);
+}
+
+.img4 {
+    width: 400px;
+    height: 500px;
+    background: url('images/img-8.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    filter: grayscale(1);
+}
