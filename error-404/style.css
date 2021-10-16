@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Monument';
+    src: url('../MonumentExtended-Ultrabold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Bigilla';
+    src: url('./Bigilla-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body{
+    background-color: #e0e0e0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-family: 'Monument';
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #294757;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.page {
+    display: flex;
+    padding-left: 100px;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page__inner{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    width: 70%;
+}
+
+.page__inner span{
+    font-size: 250px;
+    line-height: 89%;
+    color: #1f3d4d;
+    font-weight: bold;
+    overflow: hidden;
+    font-family: 'Bigilla';
+    text-transform: uppercase;
+}
+
+.span404{
+    display: inline-block;
+    width: max-content;
+    font-size: 200px;
+    text-align: center;
+    padding: 5px 50px;
+    border-radius: 300px;
+    border: 2px solid #b68c60;
+}
+
+.home-btn{
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+
+}
+
+.home-btn button{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-family: 'Neutral Face';
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    color: #b68c60;
+    text-transform: uppercase;
+    border: 1px solid #b68c60;
+    font-family: 'Monument';
+    transition: transform .6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.home-btn button:hover{
+    transform: scale(1.2);
+}
